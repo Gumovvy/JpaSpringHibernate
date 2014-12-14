@@ -19,8 +19,7 @@ public class UserDetails {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int userId;
 	private String userName;
-	@OneToMany
-	@JoinTable(name = "USER_Vechicle", joinColumns = @JoinColumn(name = "USER_ID"), inverseJoinColumns = @JoinColumn(name = "Vechicle_ID"))
+	@OneToMany(mappedBy = "user")
 	private Collection<Vechicle> vechicle = new ArrayList<Vechicle>();
 
 	public Collection<Vechicle> getVechicle() {

@@ -16,6 +16,7 @@ public class Vechicle {
 	private int vechcleId;
 	private String vechicleName;
 	@ManyToOne
+	@JoinColumn(name = "USER_ID")
 	private UserDetails user;
 
 	public UserDetails getUser() {
