@@ -26,8 +26,10 @@
 		<!-- properties -->
 
 		<property name="show_sql">true</property>
-		<mapping class="com.gmv.decerto.UserDetails" />
+<!-- 		<mapping class="com.gmv.decerto.UserDetails" /> -->
 		<mapping class="com.gmv.decerto.Vechicle" />
+		<mapping class="com.gmv.decerto.TwoWheeler" />
+		<mapping class="com.gmv.decerto.FourWheeler" />
 
 
 	</session-factory>

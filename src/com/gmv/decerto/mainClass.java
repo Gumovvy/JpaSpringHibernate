@@ -7,28 +7,27 @@ import org.hibernate.cfg.Configuration;
 public class mainClass {
 
 	public static void main(String[] args) {
-		UserDetails user = new UserDetails();
-		user.setUserName("First user");
-
 		Vechicle vechicle = new Vechicle();
-		Vechicle vechicle2 = new Vechicle();
 		vechicle.setVechicleName("Car");
 
-		vechicle2.setVechicleName("Jeep");
+		TwoWheeler bike = new TwoWheeler();
+		bike.setVechicleName("Bike");
+		bike.setSteeringHandle("Handle");
 
-		user.getVechicle().add(vechicle);
-		user.getVechicle().add(vechicle2);
-		vechicle.getUserList().add(user);
-		vechicle2.getUserList().add(user);
+		FourWheeler car = new FourWheeler();
+		car.setSteeringWheel("Wheel");
+		car.setVechicleName("Porsche");
+
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
 
-		session.persist(user);
+		session.save(vechicle);
+		session.save(bike);
+		session.save(car);
 
 		session.getTransaction().commit();
 		session.close();
 
 	}
-
 }
