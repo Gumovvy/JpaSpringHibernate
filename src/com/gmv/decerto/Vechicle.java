@@ -19,7 +19,7 @@ public class Vechicle {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int vechcleId;
 	private String vechicleName;
-	@ManyToMany
+	@ManyToMany(mappedBy = "vechicle")
 	private Collection<UserDetails> userList = new ArrayList<UserDetails>();
 
 	public Collection<UserDetails> getUserList() {
