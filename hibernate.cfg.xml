@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<!-- Generated file - Do not edit! -->
+
+<hibernate-configuration>
+
+	<!-- a SessionFactory instance listed as /jndi/name -->
+	<session-factory>
+
+		<!-- User / Password -->
+		<property name="connection.username">postgres</property>
+		<property name="connection.password">gumovvy</property>
+
+		<!-- Database Settings -->
+		<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		<property name="connection.driver_class">org.postgresql.Driver</property>
+
+		<property name="connection.url">jdbc:postgresql://localhost:5432/Decerto</property>
+
+		<!-- Database Scheme Auto Update -->
+		<property name="hbm2ddl.auto">update</property>
+		<property name="hibernate.temp.use_jdbc_metadata_defaults">false</property>
+
+
+		<!-- properties -->
+
+		<property name="show_sql">true</property>
+
+
+	</session-factory>
+
+</hibernate-configuration>
