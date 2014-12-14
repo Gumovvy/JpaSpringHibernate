@@ -24,9 +24,7 @@ public class mainClass {
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
 
-		session.save(user);
-		session.save(vechicle);
-		session.save(vechicle2);
+		session.persist(user);
 
 		session.getTransaction().commit();
 		session.close();
