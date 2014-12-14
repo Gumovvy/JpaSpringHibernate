@@ -18,8 +18,8 @@ public class mainClass {
 
 		user.getVechicle().add(vechicle);
 		user.getVechicle().add(vechicle2);
-		vechicle.setUser(user);
-		vechicle2.setUser(user);
+		vechicle.getUserList().add(user);
+		vechicle2.getUserList().add(user);
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();

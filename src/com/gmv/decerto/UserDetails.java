@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
@@ -19,7 +20,7 @@ public class UserDetails {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int userId;
 	private String userName;
-	@OneToMany(mappedBy = "user")
+	@ManyToMany
 	private Collection<Vechicle> vechicle = new ArrayList<Vechicle>();
 
 	public Collection<Vechicle> getVechicle() {
