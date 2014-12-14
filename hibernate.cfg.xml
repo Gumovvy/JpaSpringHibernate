@@ -26,6 +26,7 @@
 		<!-- properties -->
 
 		<property name="show_sql">true</property>
+		<mapping class="com.gmv.mesTest.UserDetails" />
 
 
 	</session-factory>
