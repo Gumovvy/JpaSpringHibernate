@@ -19,14 +19,15 @@
 		<property name="connection.url">jdbc:postgresql://localhost:5432/Decerto</property>
 
 		<!-- Database Scheme Auto Update -->
-		<property name="hbm2ddl.auto">update</property>
+		<property name="hbm2ddl.auto">create</property>
 		<property name="hibernate.temp.use_jdbc_metadata_defaults">false</property>
 
 
 		<!-- properties -->
 
 		<property name="show_sql">true</property>
-		<mapping class="com.gmv.mesTest.UserDetails" />
+		<mapping class="com.gmv.decerto.UserDetails" />
+		<mapping class="com.gmv.decerto.Vechicle" />
 
 
 	</session-factory>
